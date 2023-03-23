@@ -14,12 +14,16 @@ class PizzaController extends Controller
         //$pizzas = Pizza::where('type', 'hawaiin')->get(); // Select based on condition
         //$pizzas = pizza::lastest()->get(); Get the last record
 
-        return view('pizzas', [
+        return view('pizzas.index', [ //pizzas folder then index file
             'pizzas' => $pizzas, //This is for the array above
         ]);
     }
 
     public function show($id) {
-        return view('details', ['id' => $id]);  
+        return view('pizzas.show', ['id' => $id]);  
+    }
+
+    public function create(){
+        return view('pizzas.create');
     }
 }
