@@ -28,8 +28,11 @@
                 </a>
             @endforeach
         </div>
+        <!-- This displaye only after form submit redirection  -->
+        <small>{{ session('successMsg') }}</small>
         <div>
-            <a href="/pizzas">Visite All Pizzas</a>
+            <a href="/pizzas/create">Order A Pizza</a>
+            <a href="/pizzas">See All Pizzas</a>
         </div>
     </div>
 </div>

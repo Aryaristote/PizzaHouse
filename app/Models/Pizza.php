@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Pizza extends Model
 {
     use HasFactory;
+    
+    //To convert poppings checkbox into a json array
+    protected $casts = [
+        'toppings' => 'array'
+    ];
 }

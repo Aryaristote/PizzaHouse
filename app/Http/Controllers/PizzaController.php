@@ -29,8 +29,25 @@ class PizzaController extends Controller
         return view('pizzas.create');
     }
 
-    Public function store(){
+    public function store(){
         // Use request(fieldName) to get the fata from input
-        return redirect('/');
+        $pizza = new Pizza(); //Creating a new instence of Pizza Model
+
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+        $pizza->toppings = request('toppings');
+
+        $pizza->save(); //To save the data in DB
+
+        //With pass a message in case the redirect works after submit the form
+        return redirect('/')->with('successMsg', 'Thanks for your order');
+    }
+
+    public function destroy($id){
+        $pizza = Pizza::findOrFail($id);
+        $pizza->delete();
+
+        return redirect('/pizzas');
     }
 }
