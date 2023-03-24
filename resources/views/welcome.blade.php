@@ -28,6 +28,9 @@
                 </a>
             @endforeach
         </div>
+        <div>
+            <a href="/pizzas">Visite All Pizzas</a>
+        </div>
     </div>
 </div>
 @endsection

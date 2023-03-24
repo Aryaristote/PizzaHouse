@@ -28,4 +28,5 @@ use App\Http\Controllers\PizzaController;
 
 Route::get('/pizzas', [PizzaController::class,'index']);
 Route::get('/pizzas/create', [PizzaController::class,'create']); //Always put this above the {id} route to avoit confusing in url
+Route::post('/pizzas', [PizzaController::class, 'store']);
 Route::get('/pizzas/{id}', [PizzaController::class,'show']);

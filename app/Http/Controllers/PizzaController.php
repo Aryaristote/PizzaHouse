@@ -20,10 +20,17 @@ class PizzaController extends Controller
     }
 
     public function show($id) {
-        return view('pizzas.show', ['id' => $id]);  
+        //Find on pizza using it id in the DB
+        $pizza = Pizza::findOrFail($id);
+        return view('pizzas.show', ['pizza' => $pizza]);  
     }
 
     public function create(){
         return view('pizzas.create');
+    }
+
+    Public function store(){
+        // Use request(fieldName) to get the fata from input
+        return redirect('/');
     }
 }
