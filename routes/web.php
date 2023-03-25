@@ -25,6 +25,7 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\KebabController;
 
 //->name('pizza.index') become a variable for the router path
 
@@ -34,8 +35,15 @@ Route::post('/pizzas', [PizzaController::class, 'store'])->name('pizzas.store');
 Route::get('/pizzas/{id}', [PizzaController::class, 'show'])->name('pizzas.show')->middleware('auth');
 Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy'])->name('pizzas.destroy')->middleware('auth');
 
+//Kebab
+Route::get('/kebabs', [KebabController::class, 'index'])->name('kebabs.index')->middleware('auth');
+Route::get('/kebabs/create', [KebabController::class, 'create'])->name('kebabs.create');
+Route::post('/kebabs', [KebabController::class, 'store'])->name('kebabs.store'); //New record into the DB
+Route::get('/kebabs/{id}', [KebabController::class, 'show'])->name('kebabs.show')->middleware('auth');
+Route::delete('/kebab/{id}', [KebabController::class, 'destroy'])->name('kebabs.destroy')->middleware('auth');
+
 Auth::routes([
-    'register' => false //This turn off the register route in the whole project, no longer be accessible
+    'register' => true //This turn off the register route in the whole project, no longer be accessible
     //Switch it to true, if you wanna register new admin
 ]);
 

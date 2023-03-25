@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="wrapper create-pizza">
-    <h1>Create a New Pizza</h1>
+    <h1>Order new Pizzas</h1>
         
     <form action="/pizzas" method="POST">
         @csrf <!-- Verry important -->

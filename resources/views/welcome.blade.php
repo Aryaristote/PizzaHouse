@@ -32,7 +32,9 @@
         <small>{{ session('successMsg') }}</small>
         <div class="welcom-btn">
             <a href="{{ route('pizzas.create') }}">Order A Pizza</a>
-            <a href="{{ route('pizzas.store') }}">See All Pizzas</a>
+            <a href="{{ route('pizzas.index') }}">See All Pizzas</a>
+            <a href="{{ route('kebabs.create') }}">Order A Kebab</a>
+            <a href="{{ route('kebabs.index') }}">See All Kebabs</a>
         </div><br><br>
     </div>
 </div>
