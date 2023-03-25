@@ -30,10 +30,10 @@
         </div>
         <!-- This displaye only after form submit redirection  -->
         <small>{{ session('successMsg') }}</small>
-        <div>
-            <a href="/pizzas/create">Order A Pizza</a>
-            <a href="/pizzas">See All Pizzas</a>
-        </div>
+        <div class="welcom-btn">
+            <a href="{{ route('pizzas.create') }}">Order A Pizza</a>
+            <a href="{{ route('pizzas.store') }}">See All Pizzas</a>
+        </div><br><br>
     </div>
 </div>
 @endsection

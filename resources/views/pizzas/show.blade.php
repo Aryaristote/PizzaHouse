@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -13,14 +13,15 @@
     </ul>
 
     <!-- Code for deleting a record in DB  -->
-    <form action="/pizzas/{{ $pizza->id }}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button>Complete Order</button>
-    </form>
-
-    <div>
-        <a href="/pizzas">Back to All Pizzas</a>
+    <div class="details-btn">
+        <div class="back">
+            <a href="/pizzas">Back to All Pizzas</a>
+        </div>
+        <form action="{{ route('pizzas.destroy', $pizza->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn">Complete Order</button>
+        </form>
     </div>
 </div>
 

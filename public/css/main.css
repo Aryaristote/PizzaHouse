@@ -1,5 +1,5 @@
 html, body {
-    background-color: #fff;
+    /* background-color: #ece9e9; */
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -32,6 +32,9 @@ html, body {
   .title {
     font-size: 84px;
   }
+  .navbar-brand img{
+    width: 40px;
+  }
   .links > a {
     color: #636b6f;
     padding: 0 25px;
@@ -48,9 +51,11 @@ html, body {
   footer {
     text-align: center;
     padding: 20px 0;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
   }
   html, body {
-    background-color: #fff;
     color: #636b6f;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
@@ -119,17 +124,37 @@ html, body {
   }
   .create-pizza select {
     padding: 8px;
-    width: 200px;
+    width: 200px; 
+  }
+  .create-pizza input[type=text] {
+    padding: 5px 15px;
+    background-color: transparent;
+    outline: none;
+  }
+  .create-pizza input[type=submit] {
+    background-color: transparent;
+    border: none;
+    color: #3e3e3c;
+    font-weight: bold;
+    border: 2px solid #3e3e3c;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .create-pizza input[type=text]:focus{
+    border: 1px solid #595957;
   }
   .create-pizza input[type=checkbox] {
     margin: 10px;
   }
-  .create-pizza input[type=submit] {
-    background: #5e2195;
-    padding: 8px 20px;
-    color: #fff;
+  fieldset{
     border: 0;
-    margin-top: 20px;
+  }
+  fieldset .check-list{
+    display: flex;
+    flex-direction: row;
   }
   /* pizza details page */
   .pizza-details {
@@ -140,12 +165,17 @@ html, body {
     margin: 20px 0;
     font-weight: bold;
   }
-  .pizza-details button {
-    background: #5e2195;
-    padding: 8px 20px;
-    color: #fff;
-    border: 0;
-    margin-top: 20px;
+  .pizza-details .details-btn{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .pizza-details .details-btn .back a{
+    font-weight: bold;
+    color: #645f07;
+    text-decoration: none;
+    padding-right: 20px;
   }
   a.back {
     display: block;
@@ -162,18 +192,73 @@ html, body {
     margin: 10px 0;
     padding: 12px;
     background: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
   }
   .pizza-index .pizza-item img {
     width: 60px;
     display: inline-block;
   }
-  .pizza-index .pizza-item h4 {
-    display: inline-block;
+  .pizza-index .pizza-item a {
+    color: rgb(66, 64, 64);
+    text-decoration: none;
+    padding: 0;
+    /* display: inline-block; */
     font-weight: normal;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .pizza-index .pizza-item h4 a {
     color: #777;
     text-decoration: none !important;
   }
-  
+
+  .home-btn{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .home-btn a {
+    background-color: transparent;
+    border: none;
+    color: #3e3e3c;
+    font-weight: bold;
+    border: 2px solid #3e3e3c;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .welcom-btn{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .welcom-btn a {
+    background-color: transparent;
+    border: none;
+    color: #3e3e3c;
+    font-weight: bold;
+    border: 2px solid #3e3e3c;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .details-btn .btn{
+    background-color: transparent;
+    border: none;
+    color: #3e3e3c;
+    font-weight: bold;
+    border: 2px solid #3e3e3c;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

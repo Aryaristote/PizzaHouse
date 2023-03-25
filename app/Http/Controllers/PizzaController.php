@@ -7,6 +7,11 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+    //Consequence: This require auth middleware to all route
+    // public function __construct(){
+    //     $this->middleware('auth');
+    // }
+
     public function index() {
         
         $pizzas = Pizza::all(); //Get all DB by once
